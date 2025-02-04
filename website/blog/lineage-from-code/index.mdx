@@ -26,7 +26,7 @@ For example, restore jobs triggered only during incidents or annual computations
 * **Specific code-paths that rarely trigger**
 Some pipelines run frequently, but certain code paths are triggered only under rare conditions. For example, dbt incremental models typically run as incremental updates, and full refreshes are seldom executed, leaving their lineage underrepresented.
 * **Rarely Viewed Dashboards**
-Dashboards that are infrequently accessed may not emit queries often enough to appear in runtime lineage. For instance, renaming a column might not show any immediate impact, but it could break an obscure dashboard used only once a quarter or year.
+Dashboards that are infrequently accessed might not emit queries often enough to appear in runtime lineage. For instance, renaming a column might not show any immediate impact, but it could break an obscure dashboard used only once a quarter or year.
 
 In these scenarios, runtime lineage cannot provide the full picture. To fill this gap, **lineage extracted directly from code** becomes critical. Together, runtime and code-based lineage create a comprehensive view, ensuring organizations are fully informed regardless of pipeline execution frequency.
 
